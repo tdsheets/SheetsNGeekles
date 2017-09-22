@@ -1,10 +1,5 @@
 $(document).ready(function() {
     
-    //starts slideshow
-    setTimeout(function() {
-       $('.js-dir0').fadeOut(1750, 'linear');
-    }, 1750);
-    fades(1);
     
     /* For the sticky navigation */
     $('.products').waypoint(function(direction) {
@@ -49,24 +44,3 @@ $(document).ready(function() {
     });
     
 });
-
-/* -------- Slider Code -------- */
-function fades(n) {
-    // n is the div number - currently 0-2
-    var div = '.js-dir' + n;
-    var oldDiv;
-
-    $(div).fadeIn(1750, 'linear');
-    oldDiv = div;
-    setTimeout(function() {
-        //n++;
-        if(n <= 1) {
-            n++;
-        }
-        else if (n == 2) {
-            n = 0;
-        }
-        fades(n);
-        $(oldDiv).fadeOut(1750, 'linear');
-    }, 4000);
-}
