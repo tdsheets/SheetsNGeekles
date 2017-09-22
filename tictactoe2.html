@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic-Tac-Toe</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,200,300,300italic' rel='stylesheet' type='text/css'>
+    <script src="jquery-2.0.3.min.js"></script>
+    <script src="tictactoe.js"></script>
+</head>
+<body id="game">
+    <main>
+        <h1>Tic-Tac-Toe</h1>
+        <div id="game-1" class="done board">
+            <p>
+                Player One's turn!
+            </p>
+            <table>
+                <tr class="top">
+                    <td class="lft topLft"></td>
+                    <td class="mid topMid"></td>
+                    <td class="rgt topRgt"></td>
+                </tr>
+                <tr class="middle">
+                    <td class="lft midLft"></td>
+                    <td class="mid midMid"></td>
+                    <td class="rgt midRgt"></td>
+                </tr>
+                <tr class="bot">
+                    <td class="lft botLft"></td>
+                    <td class="mid botMid"></td>
+                    <td class="rgt botRgt"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="game0" class="current board">
+            <p>
+                Player One's turn!
+            </p>
+            <table>
+                <tr class="top">
+                    <td class="lft topLft"></td>
+                    <td class="mid topMid"></td>
+                    <td class="rgt topRgt"></td>
+                </tr>
+                <tr class="middle">
+                    <td class="lft midLft"></td>
+                    <td class="mid midMid"></td>
+                    <td class="rgt midRgt"></td>
+                </tr>
+                <tr class="bot">
+                    <td class="lft botLft"></td>
+                    <td class="mid botMid"></td>
+                    <td class="rgt botRgt"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="game1" class="next board">
+            <p>
+                <br />
+            </p>
+            <table>
+                <tr class="top">
+                    <td class="lft topLft"></td>
+                    <td class="mid topMid"></td>
+                    <td class="rgt topRgt"></td>
+                </tr>
+                <tr class="middle">
+                    <td class="lft midLft"></td>
+                    <td class="mid midMid"></td>
+                    <td class="rgt midRgt"></td>
+                </tr>
+                <tr class="bot">
+                    <td class="lft botLft"></td>
+                    <td class="mid botMid"></td>
+                    <td class="rgt botRgt"></td>
+                </tr>
+            </table>
+        </div>
+        <input type="button" id="clear" value="Clear" />
+    </main>
+    <footer>
+        <p>
+            <a href="index.html">SheetsNGeekles.com</a>
+        </p>
+        Copyright &copy; 2016 by Tara Sheets. All rights reserved.
+    </footer>
+</body>
+</html>

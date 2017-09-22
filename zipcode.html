@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zip Code Look-Up</title>
+    <meta charset="utf-8" />
+    <script src="jquery-2.0.3.min.js"></script>
+    <script>
+        function getInfo() {
+            var zipcode = document.getElementById("zip").value;
+            var city;
+            
+            city = $.get(
+                    "zipcode-work.php",
+                    { zip : zipcode },
+                    function(data) {
+                        alert(data.cityName);
+                    },
+                    "json");
+
+            /*if (zipcode !== "") {
+                if (window.XMLHttpRequest) {
+                    // code for IE7+, Firefox, Chrome, Opera, Safari
+                    xmlhttp = new XMLHttpRequest();
+                }
+                else {
+                    // code for IE6, IE5
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange = function() {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                        document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+                    }
+                };
+                xmlhttp.open("GET", "zipcode-work.php?q="+zipcode,true);
+                xmlhttp.send();
+            }*/
+            return false;
+            
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="getInfo()">
+        <label>Enter the zip code you want to look up:</label>
+        <input type="text" id="zip" name="zipcode" size="30" tabindex="1" autofocus>
+        <input type="button" value="Submit" tabindex="2" onclick="getInfo()">
+    </form>
+    <div id="txtHint"></div>
+</body>
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <title>Zip Code Look-Up</title>
+    <meta charset="utf-8" />
+    <script src="jquery-2.0.3.min.js"></script>
+    <script>
+        function getInfo() {
+            var zipcode = document.getElementById("zip");
+            
+            if (zipcode !== "") {
+                if (window.XMLHttpRequest) {
+                    // code for IE7+, Firefox, Chrome, Opera, Safari
+                    xmlhttp = new XMLHttpRequest();
+                }
+                else {
+                    // code for IE6, IE5
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange = function() {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                        document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+                    }
+                };
+                xmlhttp.open("GET", "zipcode-work.php?q="+zipcode,true);
+                xmlhttp.send();
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label>Enter the zip code you want to look up:</label>
+        <input type="text" id="zip" name="zipcode" size="30" tabindex="1" />
+    </form>
+    <input type="button" value="Submit" tabindex="2" onclick="getInfo()" />
+    <div id="txtHint"></div>
+</body>-->

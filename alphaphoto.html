@@ -1,0 +1,62 @@
+<html>
+<head>
+ <link rel="stylesheet" type="text/css" href="photoArt.css" />
+ <script src="jquery-2.0.3.min.js"></script>
+ <script src="wordArt.js"></script>
+        
+<title>Letter Art</title>
+</head>
+<body>
+<main>
+<div id="options">
+   <form class="choose">
+      <input type="text" id="selectedWord" placeholder="Whizzbangs" maxlength="10" />
+      <button type="button" class="changeWord" id="changeWord" onclick="setWord()">Go</button>
+   </form>
+
+   <div class="directions js-dir0">
+      <span>Enter a name</span> or word in box below
+   </div>
+   <div class="directions js-dir1">
+      <span>Click Go</span> to transform your word into Letter Art
+   </div>
+   <div class="directions js-dir2">
+      <span>Click a photo</span> to view image choices
+   </div>
+   <div class="directions js-dir3 repeat" onclick="repeatDirections()">
+      Repeat the directions
+   </div>
+</div>
+
+<div id="changes">
+   <span onclick="setWord()">Shuffle Letters</span> | <span onclick="resetWord()">Clear Word</span>
+</div>
+
+<div id="frame">
+   <div id="mat">
+   </div>
+</div>
+
+<div id="info">
+   <p>Click on a letter to change it.</p>
+</div>
+</main>
+<footer>
+        <div class="row">
+            <p>
+                <a href="index.html">SheetsNGeekles.com</a>
+            </p>
+            Copyright &copy; 2016 by Tara Sheets. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
+
+<!-- TODO
+
+     Give color options: color, bw, or mixed
+     Responsive CSS
+     Add image sources to the page
+
+-->

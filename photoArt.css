@@ -1,0 +1,215 @@
+/* ----------------------------------------------------- */
+/* BASIC SETUP */
+/* ----------------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    background-color: #fff;
+    background-height: cover;
+    color: #555;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/* --------------------------------------------------- */
+
+main {
+   background-color: #ddd;
+   margin: 0 auto;
+   height: 85vh;
+}
+#options {
+   background-color: #2C3E50;
+   border-bottom: #65A2D1 solid 1px;
+   width: 100%;
+   padding: 20px;
+   margin: 0 auto 80px auto;
+   box-shadow: 0 3px 10px #777;
+}
+#selectedWord {
+   font-size: 120%;
+   width: 10%;
+   background-color: #eee;
+}
+.changeWord {
+   height: 33px;
+   width: 5%;
+   background-color: #E67E22;
+   border: none;
+   color: #ddd;
+   position: absolute;
+   top: 20px;
+   left: 11.5%;
+   font-size: 90%;
+   transition: background-color 1s;
+}
+.choose button:hover {
+   background-color: #CA6B17;
+}
+.directions {
+   color: #ddd;
+   margin: 0 auto;
+   position: absolute;
+   top: 50px;
+   left: 20%;
+   opacity: 0;
+}
+.directions span {
+   color: #E67E22;
+   font-weight: bold;
+}
+.repeat {
+   color: #E67E22;
+   text-decoration: underline;
+   font-size: 80%;
+   font-style: italic;
+   cursor: pointer;
+}
+#colors {
+   position: relative;
+   top: -125px;
+   left: 300px;
+}
+select {
+   width: 100px;
+}
+#priceTag {
+   position: absolute;
+   background-color: #660033;
+   width: 40px;
+   height: 40px;
+   top: 10px;
+   right: 30px;
+   cursor: pointer;
+}
+#changes,
+#info {
+   width: 100%;
+   text-align: center;
+   font-size: 75%;
+}
+#changes span {
+   cursor: pointer;
+   font-style: italic;
+   text-decoration: underline;
+}
+#info p {
+   font-style: italic;
+}
+#frame {
+   background-color: #fff;
+   background: linear-gradient(to right, transparent, #fff, transparent);
+   height: 250px;
+   margin: 30px auto;
+   padding: 30px 20%;
+}
+#mat {
+   margin: 0 auto;
+   background-color: #000;
+}
+.letterArt {
+   margin: 10px auto;
+   float: left;
+}
+#directions span {
+   font-weight: bold;
+}
+.images {
+   height: 180px;
+   width: 100px;
+   cursor: pointer;
+   border: 4px solid #34495E;
+}
+.iframefloat {
+   width: 68%;
+   //height: 400px;
+   height: 38%;
+   position: absolute;
+   top: 250px;
+   left: 15%;
+   background-color: #FFF;
+   border: solid #BBB 7px;
+   border-radius: 10px;
+   z-index: 100;
+}
+#close {
+   z-index: 101;
+   width: 2%;
+   position: absolute;
+   top: 230px;
+   left: 80%;
+   cursor: pointer;
+}
+.imageChoices {
+   //width: 100px;
+   width: 10%;
+   background-color: #000;
+   border: solid #000 1px;
+   border-radius: 5px;
+   //margin: 30px 10px;
+   margin: 30px 1.2%;
+   position: relative;
+   padding: 5px 0;
+   cursor: pointer;
+}
+.imageChoices:hover {
+   width: 12.4%;
+   position: relative;
+   margin: 0;
+   padding: 0px;
+   border: solid #E67E22 5px;
+}
+#hide {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   background-color: #111;
+   opacity: 0.8;
+   z-index: 99;
+}
+footer {
+   text-align: center;
+   background-color: #E67E22;
+   height: 15vh;
+   padding-top: 30px;
+   box-shadow: 0 -3px 10px #777;
+   color: #333;
+   font-size: 70%;
+}
+footer p {
+   margin: 0 auto 15px auto;
+   border-bottom: 1px solid #333;
+   width: 15%;
+   padding-bottom: 7px;
+}
+footer a:link,
+footer a:visited {
+   color: #2C3E50;
+   text-decoration: none;
+   transition: color 1s;
+   font-size: #80%;
+}
+footer a:hover,
+footer a:active {
+   color: #2574A9;
+}
