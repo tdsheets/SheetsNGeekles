@@ -1,0 +1,521 @@
+/*Lightning Yellow #F5AB35 */
+/*Purple #ad24ad */
+
+
+/* ----------------------------------------------------- */
+/* BASIC SETUP */
+/* ----------------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    background-color: #fff;
+    color: #555;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/* ----------------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* ----------------------------------------------------- */
+
+/* ------------------ Headings ------------------------- */
+
+h1 { font-family: 'Alex Brush', cursive; }
+h2 { text-align: center; }
+
+/* -------------------- Other -------------------------- */
+
+p { line-height: 140%; }
+
+/* ------------------Paragraphs------------------------- */
+
+/* ----------------------------------------------------- */
+/* HEADER */
+/* ----------------------------------------------------- */
+
+header {
+    background: linear-gradient(#ffda53, #ffc800);
+    height: 80px;
+    z-index: 5;
+}
+
+.logo img {
+    width: 5%;
+    margin: -15px 0 0 3%;
+}
+
+.viewCart {
+    width: 7.5%;
+    float: right;
+    margin: 20px 2% 0 0;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav ul {
+    position: absolute;
+    top: 30px;
+    left: 12%;
+    width: 50%;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0 2%;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+    text-decoration: none;
+    color: #ad24ad;
+    font-size: 120%;
+}
+
+nav ul li a:hover,
+nav ul li a:active {
+    color: #555;
+    text-shadow: none;
+}
+
+nav ul li ul {
+    display: none;
+}
+
+/* ------------------- Sticky Navi --------------------- */
+
+/* Sticky navi */
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(173, 36, 173, 0.9);
+    box-shadow: 0 2px 2px #AD24AD;
+    z-index: 9999;
+}
+
+.sticky .logo img {
+    display: none;
+}
+
+.sticky nav ul {
+    top: 20px;
+    left: 8%;
+}
+
+.sticky nav li a:link,
+.sticky nav li a:visited {
+    font-size: 80%;
+    color: #FFC800;
+    margin-top: -20px;
+}
+
+.sticky .viewCart {
+    font-size: 80%;
+    padding: 0;
+}
+
+/* ----------------------------------------------------- */
+/* SLIDESHOW */
+/* ----------------------------------------------------- */
+
+.slides {
+    background: linear-gradient(to right, rgba(128, 0, 128, 0.38), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0),), url(images/flowers/stock/mason-jar-min.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: top;
+    position: relative;
+}
+
+.slides img {
+    height: 120vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.slides h1 {
+    font-size: 450%;
+    line-height: 80%;
+    //width: 30%;
+    width: 100%;
+    position: relative;
+    //top: 180px;
+    //left: 15%;
+    color: #fff;
+    z-index: 4;
+    background: linear-gradient(to right, rgba(128, 0, 128, 0.38), rgba(128, 0, 128, 0.38), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+    height: 100vh;
+    padding-top: 180px;
+    padding-right: 60%;
+    padding-left: 15%;    
+}
+
+/* ----------------------------------------------------- */
+/* PRODUCTS */
+/* ----------------------------------------------------- */
+
+.products {
+    background: #e6e6e6;
+    height: 550px;
+    position: relative;
+    padding-top: 5px;
+}
+
+.products h2 {
+    margin-top: 60px;
+}
+
+.thumbs {
+    width: 100%;
+    position: relative;
+}
+
+.thumbs div {
+    position: absolute;
+    background-size: cover;
+}
+
+.thumbs div:hover {
+    background-size: cover;
+}
+
+.thumbs div:hover .info {
+    display: block;
+    width: 100%;
+}
+
+.info {
+    text-align: center;
+    display: none;
+    color: #ccc;
+}
+
+.product-name:link,
+.product-name:visited {
+    color: #FFDA53;
+    text-decoration: none;
+}
+
+.product-name:hover,
+.product-name:active {
+    color: #F5AB35;
+}
+
+
+/* ---------------- Rose Picture and Info --------------- */
+
+.rose {
+    border: solid #FFC800 20px;
+    z-index: 3;
+    width: 30%;
+    top: 60px;
+    left: 43%;
+    background: url(images/flowers/stock/rose-bouquet-min.jpg);
+    height: 342px;
+}
+
+.rose:hover {
+    width: 32%;
+    height: 352px;
+    top: 55px;
+    left: 42%;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(images/flowers/stock/rose-bouquet-min.jpg);
+}
+
+.rose:hover .info { padding-top: 125px; }
+
+/* ---------------- Purple Picture and Info --------------- */
+
+.purple {
+    width: 20%;
+    border: solid #F5AB35 15px;
+    top: 100px;
+    left: 2%;
+    z-index: 2;
+    background: url(images/flowers/stock/purple-bouquet.jpg);
+    height: 210px;
+}
+
+.purple:hover {
+    width: 22%;
+    top: 95px;
+    left: 1%;
+    height: 220px;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(images/flowers/stock/purple-bouquet.jpg);
+}
+
+.purple:hover .info { padding-top: 60px; }
+
+/* ---------------- Pink Picture and Info --------------- */
+
+.pink {
+    width: 25%;
+    border: solid #F5AB35 20px;
+    top: 40px;
+    left: 68%;
+    background: url(images/flowers/stock/pink-bouquet-min.jpg);
+    height: 280px;
+}
+
+.pink:hover {
+    width: 27%;
+    top: 35px;
+    left: 67%;
+    z-index: 4;
+    height: 300px;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(images/flowers/stock/pink-bouquet-min.jpg);
+}
+
+.pink:hover .info { padding-top: 100px; }
+
+/* ---------------- Daisy Picture and Info --------------- */
+
+.daisy {
+    width: 15%;
+    border: solid #FFC800 10px;
+    top: 250px;
+    left: 83%;
+    background: url(images/flowers/stock/daisy-bouquet.jpg);
+    height: 170px;
+}
+
+.daisy:hover {
+    width: 17%;
+    top: 245px;
+    left: 82%;
+    z-index: 4;
+    height: 180px;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(images/flowers/stock/daisy-bouquet.jpg);
+}
+
+.daisy:hover .info { padding-top: 45px; }
+
+/* ---------------- Orange Picture and Info --------------- */
+
+.orange {
+    width: 27%;
+    border: solid #FFC800 15px;
+    top: 30px;
+    left: 10%;
+    background: url(images/flowers/stock/orange-bouquet-min.jpg);
+    height: 270px;
+}
+
+.orange:hover {
+    width: 29%;
+    top: 25px;
+    left: 9%;
+    z-index: 4;
+    height: 280px;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(images/flowers/stock/orange-bouquet-min.jpg);
+}
+
+.orange:hover .info { padding-top: 80px; }
+
+/* ---------------- Rose Picture and Info --------------- */
+
+.white {
+    width: 17%;
+    border: solid #F5AB35 10px;
+    top: 210px;
+    left: 30%;
+    z-index: 2;
+    background: url(images/flowers/stock/white-bouquet.jpg);
+    height: 180px;
+}
+
+.white:hover {
+    width: 19%;
+    top: 205px;
+    left: 29%;
+    z-index: 4;
+    height: 190px;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(images/flowers/stock/white-bouquet.jpg);
+}
+
+.white:hover .info { padding-top: 55px; }
+
+/* ----------------------------------------------------- */
+/* ABOUT */
+/* ----------------------------------------------------- */
+
+.about {
+    background-color: #FFDA53;
+    padding: 60px;
+}
+
+.about img {
+    width: 35%;
+    border: solid #ad24ad 20px;
+    margin: 30px 0 0 12%;
+}
+
+.about p {
+    width: 30%;
+    float: right;
+    margin: 130px 15% 0 0;
+}
+
+.about a:link,
+.about a:visited {
+    color: #AD24AD;
+    text-decoration: none;
+}
+
+.about a:hover,
+.about a:active {
+    color: #999;
+}
+
+/* ----------------------------------------------------- */
+/* MAP */
+/* ----------------------------------------------------- */
+
+.mapShowcase {
+    background-color: #f7f7f7;
+}
+
+#map {
+    width: 45%;
+    height: 550px;
+    margin: 0 10%;
+}
+
+.mapShowcase p {
+    width: 27%;
+    float: right;
+    margin: -300px 10% 0 0;
+}
+
+/* ----------------------------------------------------- */
+/* CONTACT */
+/* ----------------------------------------------------- */
+
+.contact {
+    padding: 60px;
+    background: linear-gradient(rgba(173, 36, 173, 0.38), rgba(173, 36, 173, 0.38), rgba(0, 0, 0, 0.38)), url(images/stock/instagram-min.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contact h2 {
+    color: #eee;
+}
+
+/*.contact p {
+    color: #F5AB35;
+    margin: 20px 0 30px 0;
+    text-shadow: 1px 1px #ad24ad;
+    text-align: center;
+}*/
+
+.contact table {
+    background-color: rgba(0, 0, 0, 0.7);
+    //background-color: #ad24ad;
+    margin: 20px 0 0 32%;
+    width: 35%;
+    padding: 30px;
+}
+
+.contact td {
+    padding: 10px;
+    vertical-align: top;
+    color: #F5AB35;
+    text-align: center;
+}
+
+.disclaimer {
+    font-size: 70%;
+    padding-top: 30px !important;
+}
+
+.name,
+.email,
+.pword,
+.contact textarea {
+    border: none;
+    width: 100%;
+    line-height: 200%;
+    background-color: rgba(222, 222, 222, 0.3);
+    padding-left: 2px;
+    color: #CCC;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 70%;
+}
+
+.contact textarea {
+    height: 200px;
+}
+
+.submit {
+    padding: 15px;
+    width: 60%;
+    background-color: #FFDA53;
+    border: none;
+    color: #333;
+}
+
+.submit:hover {
+    background-color: #FFC800;
+}
+
+/* ----------------------------------------------------- */
+/* FOOTER */
+/* ----------------------------------------------------- */
+
+footer {
+    text-align: center;
+    background: linear-gradient(to right, rgba(20,20,20,1), rgba(30,30,30,1), rgba(20,20,20,1));
+    font-size: 80%;
+    padding: 10px 0 30px 0;
+}
+
+footer p {
+    padding-top: 10px;
+}
+
+footer .social-links {
+    float: right;
+    padding-right: 80px;
+    margin-top: -45px;
+}
+
+footer a:link,
+footer a:visited {
+    color: #FFDA53;
+    text-decoration: none;
+}
+
+footer a:hover,
+footer a:active {
+    color: #ad24ad;
+}
+
+.ion-social-linkedin {
+    font-size: 150%;
+}
